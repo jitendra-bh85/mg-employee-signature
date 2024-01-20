@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="https://metrogroup.ind.in/media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://metrogroup.ind.in/media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl" style="display: flex; padding: 15px;">
+        <form>
+            <fieldset>
+                <legend>Employee Details</legend>
+                <div class="ins">
+
+                    <div class="mb-15">
+                        <div class="material-input-container">
+                            <label class="material-input-label">
+                                <input class="material-input" type="text" ng-model="name" required>
+                                <span class="material-input-label-text">Enter your name</span>
+                                <span class="material-input-border"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-15">
+                        <div class="material-input-container">
+                            <label class="material-input-label">
+                                <input class="material-input" type="text" ng-model="designation" required>
+                                <span class="material-input-label-text">Enter your designation</span>
+                                <span class="material-input-border"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-15">
+                        <div class="toggle mb-20">
+                            <input type="checkbox" ng-model="myVar" />
+                            <label> &nbsp;&nbsp;&nbsp; <strong>Area Specified</strong></label>
+                        </div>
+                        <div ng-show="myVar" class="material-input-container mb-15">
+                            <label class="material-input-label">
+                                <input class="material-input" type="text" ng-model="workingarea" required>
+                                <span class="material-input-label-text">Enter your area specified</span>
+                                <span class="material-input-border"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-15">
+                        <div class="material-input-container">
+                            <label class="material-input-label">
+                                <input class="material-input" type="text" ng-model="mobile" required>
+                                <span class="material-input-label-text">Enter your mobile number</span>
+                                <span class="material-input-border"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-15">
+                        <div class="material-input-container">
+                            <label class="material-input-label">
+                                <input class="material-input" type="text" ng-model="email" required>
+                                <span class="material-input-label-text">Enter your work email</span>
+                                <span class="material-input-border"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- <div class="mb-15">
+                        <div class="material-input-container">
+                            <button type="submit">Copy Signature</button>
+                        </div>
+                    </div> -->
+                </div>
+            </fieldset>
+        </form>
+
+        <div style="width: 100%; border: 1px solid #222222; padding: 20px; margin: 5px; border-radius: 5px;">
+
+            <div class="signature">
+                <div id="email-signature">
+                    <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+                    <meta name="format-detection" content="telephone=no">
+
+                    <table style="max-width: 800px; margin: 0 auto;">
+                        <tr>
+                            <td colspan="2" style="width:600px; vertical-align: bottom;">
+                                <div style="text-align: left;">
+                                    <span class="nameClass">{{name}}</span> <br>
+                                    <span class="designation">{{designation + " " + workingarea}}</span>
+                                    <!-- <hr class="new"> -->
+                                    <br>
+                                    <img src="./assets/images/bg_border.png" height="16" />
+                                </div>
+                            </td>
+                            <td style="max-width: 300px;"><img src="assets/images/metro_logo.png" width="300" /></td>
+                        </tr>
+                        <tr class="fontClass">
+                            <td rowspan="2" style="vertical-align: top;">
+                                <table style="max-width: 200px;">
+                                    <tr>
+                                        <td><img src="./assets/images/m_call.png" width="20" /></td>
+                                        <td>{{mobile}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./assets/images/m_mail.png" width="20" /></td>
+                                        <td><a href="mailto:sample@metrogroup.ind.in">{{email}}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;"><img src="./assets/images/m_location.png"
+                                                width="25" />
+                                        </td>
+                                        <td>A/295, Saheed Nagar, <br>
+                                            Bhubaneswar, Odisha, India - 751007</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td rowspan="2" style="vertical-align: top;">
+                                <table>
+                                    <tr>
+                                        <td style="vertical-align: top;"><img src="./assets/images/m_location.png"
+                                                width="25" />
+                                        </td>
+                                        <td>Registered Office: <br>
+                                            Metro River View Complex, <br>
+                                            Near Sunshine Field, Ring Road, Cuttack, Odisha, India - 753002</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./assets/images/m_call.png" width="20" /></td>
+                                        <td>+91-671-2415296</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td style="display: flex;">
+                                            <a href="">
+                                                <table>
+                                                    <tr>
+                                                        <td><img src="./assets/images/m_earth.png" width="20" /></td>
+                                                        <td> www.metrogroup.ind.in</td>
+                                                    </tr>
+                                                </table>
+                                            </a>
+                                        </td>
+                                        <td><a href=""><img src="./assets/images/instagram_icon.png" width="10" /></a>
+                                        </td>
+                                        <td><a href=""><img src="./assets/images/facebook_icon.png" width="10" /></a>
+                                        </td>
+                                        <td><a href=""><img src="./assets/images/twitter_icon.png" width="12" /></a>
+                                        </td>
+                                        <td><a href=""><img src="./assets/images/linkedIn_icon.png" width="10" /></a>
+                                        </td>
+                                        <td><a href=""><img src="./assets/images/youtube_icon.png" width="14" /></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px;"><img src="assets/images/company_logo.png" width="300" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <img src="./assets/images/footer_bar.png" width="800" height="12" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+            
+
+            <button type="button" class="btn" data-clipboard-target=".signature"
+            data-toggle="collapse" data-target="#collapse1" aria-expanded="false"
+            aria-controls="collapse1">Copy to
+            clipboard</button>
+
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js'></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
